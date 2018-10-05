@@ -1,0 +1,146 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>micro.fda</groupId>
+  <artifactId>micro.fda.vsservice</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  	<properties>
+		<lexevs.version>6.5.1.FINAL</lexevs.version>
+	</properties>
+	<build>
+	<pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<fork>true</fork>
+					<!--<executable>C:\Program Files\Java\jdk1.8.0_121\bin\javac.exe</executable> -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</pluginManagement>
+</build>
+
+  	<dependencies>
+        <dependency>
+            <groupId>io.micronaut</groupId>
+            <artifactId>runtime</artifactId>
+            <version>1.0.0.M4</version>
+        </dependency>
+        <dependency>
+            <groupId>io.micronaut</groupId>
+            <artifactId>http-client</artifactId>
+            <version>1.0.0.M4</version>
+        </dependency>
+        <dependency>
+    <groupId>io.micronaut</groupId>
+    <artifactId>http-server</artifactId>
+    <version>1.0.0.M4</version>
+</dependency>
+
+<dependency>
+    <groupId>io.micronaut</groupId>
+    <artifactId>views</artifactId>
+    <version>1.0.0.M4</version>
+</dependency>
+
+
+<dependency>
+    <groupId>builders.dsl</groupId>
+    <artifactId>spreadsheet-builder-poi</artifactId>
+    <version>1.0.1</version>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>1.6.0</version>
+</dependency>
+
+<dependency>
+    <groupId>log4j</groupId>
+    <artifactId>log4j</artifactId>
+    <version>1.2.17</version>
+</dependency>
+		
+		<dependency>
+			<groupId>lexevs</groupId>
+			<artifactId>lexbig-impl</artifactId>
+			<version>${lexevs.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>lexevs</groupId>
+			<artifactId>lexbig-interfaces</artifactId>
+			<version>${lexevs.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>lexevs</groupId>
+			<artifactId>lexevs-valuesets</artifactId>
+			<version>${lexevs.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>lexevs</groupId>
+			<artifactId>lexbig-model</artifactId>
+			<version>${lexevs.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>lexevs</groupId>
+			<artifactId>lexgrid-model</artifactId>
+			<version>${lexevs.version}</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>lexevs</groupId>
+			<artifactId>lexevs-dao</artifactId>
+			<version>${lexevs.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>lexevs</groupId>
+			<artifactId>lexgrid-resourcereader</artifactId>
+			<version>${lexevs.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>lexevs</groupId>
+			<artifactId>lexgrid-util</artifactId>
+			<version>${lexevs.version}</version>
+		</dependency>
+  	</dependencies>
+  	  <repositories>
+    <repository>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <id>Spring</id>
+      <name>Spring Plugins</name>
+      <url>http://repo.spring.io/plugins-release/</url>
+    </repository>
+    
+		<repository>
+			<id>nci.maven.releases</id>
+			<name>NCI Maven Release Repository</name>
+			<url>https://ncimvn.nci.nih.gov/nexus/content/repositories/LexEVSRelease</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		
+		<repository>
+			<id>nci.maven.thirdparty</id>
+			<name>NCI Maven 3rd Party Repository</name>
+			<url>https://ncimvn.nci.nih.gov/nexus/content/repositories/LexEVS3rdParty</url>
+		</repository>
+  </repositories>
+</project>
